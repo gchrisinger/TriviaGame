@@ -57,18 +57,18 @@ var questions = [
     {
       question: 'Peregrine falcons can dive-bomb at speeds of ...',
       answers: [
-        { answer: '55 mph', value: true },
+        { answer: '55 mph', value: false },
         { answer: '90 mph', value: false },
-        { answer: '200 mph', value: false },
+        { answer: '200 mph', value: true },
         { answer: '400 mph', value: false }
       ]
     }
   ];
   
-  TODO: Global variables
-  var game;
+//   TODO: Global variables
+  var game = 0;
   var counter = 0;
-  var clock;
+  var clock = 90;
   var timer = 30;
   var correctCounter = 0;
   var incorrectCounter = 0;
@@ -84,7 +84,7 @@ var questions = [
     });
   
     $('body').on('click', '.answer', function(event) {
-      // console.log($(this));
+      console.log($(this));
       chosenAnswer = $(this).text();
       var answerCounter = questions[counter].answers;
   
@@ -183,7 +183,7 @@ var questions = [
     }
   }
   
-  TODO: Finish the game
+//   TODO: Finish the game
   function finishGame() {
     var final = $('.main')
       .html("<p>All done, here's how you did!<p><br><br>")
@@ -194,7 +194,7 @@ var questions = [
     $('.final').append('<p><a class="btn btn-primary btn-lg reset-button" href="#">Restart the game!</a></p>');
   }
   
-  TODO: Reset the game
+//   TODO: Reset the game
   function resetGame() {
     counter = 0;
     correctCounter = 0;

@@ -12,7 +12,7 @@ body {
     visibility: hidden;
   }
   .img-initial {
-    background: url('../images/trivia-game.png') no-repeat center top;
+    background: red
     background-size: 70%;
     height: 520px;
   }
